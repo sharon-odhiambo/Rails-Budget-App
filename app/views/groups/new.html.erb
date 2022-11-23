@@ -1,0 +1,16 @@
+<%= form_with model:@group, url: groups_url do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :icon %><br />
+      <%= f.text_field :icon %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Add" %>
+    </div>
+  <% end %>
+  <%= link_to "Back Home", root_path %>
