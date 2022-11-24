@@ -1,23 +1,10 @@
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-  <nav class="navbar navbar-light bg-info">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
 <% @group.each do |g| %>
-    <div class="d-flex justify-content-between">
-    <img src="<%= g.icon %> " alt="icon" />
+    <div class="d-flex justify-content-between ps-3 pe-5">
+    <img src="<%= g.icon %>" alt="#" />
     <%= link_to group_path(g.id) do %>
-    <p><%= g.name %></p>
+    <%= g.name %>
     <% end %>
-    <p><%= g.name %></p>
+    <p><%= Group.total_spending(params[:id]) %></p>
     </div>
 <% end %>
-<%= link_to "Add a new category", new_group_path %>
+<%= link_to "Add a new category", new_group_path, class: "btn btn-info text-light align-self-center w-100" %>

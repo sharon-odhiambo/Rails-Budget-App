@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
     group = Group.create(groups_params)
     group.user = current_user
     flash[:notice] = if group.save
-                       'Category created successfully'
+                       'Group Category created successfully'
                      else
                        'Error'
                      end

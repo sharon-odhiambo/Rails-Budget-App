@@ -2,15 +2,15 @@
   <div class="container">
       <%= link_to '←', groups_path, class:'text-decoration-none fs-2' %>
       <a class="navbar-brand" href="#"> Expenses</a>
-      <%= link_to 'Next',{}, class: 'fs-5 text-decoration-none'%>
+      <div></div>
   </div>
 </nav>
 <div class = 'container pt-4 '>
   <% @group.each do |g| %> 
     <% if g.id == params[:id].to_i %>
-      <div class = 'd-flex flex-row justify-content-between w-70'>
-          <div> <%= g.icon %> </div>
-          <p> <strong><%= g.name %></strong> total spending: <strong>$<%= Group.total_spending(params[:id]) %> </strong></p>
+      <div class = 'd-flex flex-row justify-content-between pe-3'>
+          <%= g.icon %>
+          <p> <strong><%= g.name %></strong> Total: <strong>$<%= Group.total_spending(params[:id]) %> </strong></p>
       <%end%> 
     <%end%>
   </div>
@@ -35,9 +35,9 @@
   <div class = 'container cat-color py-3'>
     <div class = 'card cat-color border-white'>
       <div class = 'card-body text-center'>
-        <%= link_to 'Add Item',new_group_item_path(current_user.id, params[:id]), class:'text-decoration-none fs-4'%>
+        <%= link_to 'Add Item',new_group_item_path(current_user.id, params[:id]), class:'text-decoration-none btn btn-info text-light'%>
       </div>
     </div>
   </div>
 </div>
-<%= link_to "Back Home", root_path %>
+<%= link_to "Back Home", root_path, class: "btn btn-info text-light w-100" %>
