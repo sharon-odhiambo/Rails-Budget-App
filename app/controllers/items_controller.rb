@@ -6,9 +6,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.create(name: items_params[:name],
                         amount: items_params[:amount],
-                        author_id: current_user.id
-                        )
-
+                        author_id: current_user.id)
 
     if @item.save
       save_group_item(@item)

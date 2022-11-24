@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
+
   def index
     @group = Group.all
   end
@@ -22,7 +23,7 @@ class GroupsController < ApplicationController
     redirect_to groups_path
   end
 
-  private 
+  private
 
   def groups_params
     params.require(:group).permit(:name, :icon)

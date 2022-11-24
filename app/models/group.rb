@@ -1,9 +1,9 @@
 class Group < ApplicationRecord
-belongs_to :user
+  belongs_to :user
 
-validates :name, presence: true
-validates :icon, presence: true
-def self.total_spending(group_id)
+  validates :name, presence: true
+  validates :icon, presence: true
+  def self.total_spending(group_id)
     sum = 0
     group_items = GroupItem.all
     group_items.each do |i|

@@ -13,13 +13,14 @@
  *= require_tree .
  *= require_self
  */
- body {
+ 
+body {
    background-color: rgba(241, 241, 241, 0.6);
- } 
+} 
 
- .navbar{
+.navbar{
    background-color: #3778c2;
- }
+}
 
 .btn-info,
 .btn-info:hover,
