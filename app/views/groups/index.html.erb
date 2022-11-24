@@ -1,6 +1,6 @@
 <% @group.each do |g| %>
     <div class="d-flex justify-content-between ps-3 pe-5">
-    <img src="<%= g.icon %>" alt="#" />
+    <img src="<%= g.icon %>" alt="#" style="width:15%" class="mb-3" />
     <%= link_to group_path(g.id) do %>
     <%= g.name %>
     <% end %>

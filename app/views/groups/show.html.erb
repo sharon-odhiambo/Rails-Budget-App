@@ -1,16 +1,9 @@
-<nav class="navbar navbar-info main-bg ">
-  <div class="container">
-      <%= link_to '←', groups_path, class:'text-decoration-none fs-2' %>
-      <a class="navbar-brand" href="#"> Expenses</a>
-      <div></div>
-  </div>
-</nav>
 <div class = 'container pt-4 '>
   <% @group.each do |g| %> 
     <% if g.id == params[:id].to_i %>
       <div class = 'd-flex flex-row justify-content-between pe-3'>
-          <%= g.icon %>
-          <p> <strong><%= g.name %></strong> Total: <strong>$<%= Group.total_spending(params[:id]) %> </strong></p>
+      <img src="<%= g.icon %>" alt="#" style="width:15%" class="mb-3" />
+       <p> <strong><%= g.name %></strong> Total: <strong>$<%= Group.total_spending(params[:id]) %> </strong></p>
       <%end%> 
     <%end%>
   </div>
