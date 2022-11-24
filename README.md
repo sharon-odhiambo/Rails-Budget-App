@@ -1,24 +1,67 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails-Budget-App
 
-Things you may want to cover:
+A rails mobile app that enables the user to manage their budget by seeing their expenditures and the specific items they spend on. The app authenticates the user and once logged in they can access their individual data.
 
-* Ruby version
+## Built With
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- Rspec
+- CapyBara
 
-* System dependencies
+## Live Demo
 
-* Configuration
+## Getting Started
 
-* Database creation
+To get a local copy up and running follow these simple example steps.
 
-* Database initialization
+- `https://github.com/sharon-odhiambo/Rails-Budget-App.git`
+- `cd Rails-Budget-App` 
+- `bundle install`
+- Server - `rails s` 
+- Open `http://localhost:3000/` 
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Text Editor
+- git
 
-* Deployment instructions
+### Setup
 
-* ...
+### Install
+
+- Ruby
+- Rails
+- PostgreSQL
+
+### Run tests
+
+- `rspec .`
+
+## Authors
+
+👤 **Sharon Odhiambo**
+
+- GitHub: [@sharon-odhiambo](https://github.com/sharon-odhiambo)
+- Twitter: [@SharonVictor16](https://twitter.com/sharonvictor16)
+- LinkedIn: [Sharon Odhiambo](https://www.linkedin.com/in/sharonn-odhiambo/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+## 📝 License
+
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
