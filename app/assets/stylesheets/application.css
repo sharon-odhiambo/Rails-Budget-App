@@ -12,14 +12,13 @@
  *
  *= require_tree .
  *= require_self
- */
- 
+ */ 
 body {
-   background-color: rgba(241, 241, 241, 0.6);
-} 
+  background-color: rgba(241, 241, 241, 0.6);
+}
 
-.navbar{
-   background-color: #3778c2;
+.navbar {
+  background-color: #3778c2;
 }
 
 .btn-info,
@@ -27,7 +26,6 @@ body {
 .btn-info:active,
 .btn-info:visited,
 .btn-info:focus {
-    background-color: #3778c2;
-    border-color: #3778c2;
+  background-color: #3778c2;
+  border-color: #3778c2;
 }
- 
