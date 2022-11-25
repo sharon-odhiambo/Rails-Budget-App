@@ -12,7 +12,7 @@ A rails mobile app that enables the user to manage their budget by seeing their 
 - CapyBara
 
 ## Live Demo
-
+Here is a short video representation of the project features [Project Demo](https://www.loom.com/share/6a1b9fdecf5c404f93ad13c20e9f596d)
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
