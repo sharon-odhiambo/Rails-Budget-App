@@ -15,6 +15,15 @@
  */
 body {
   background-color: rgba(241, 241, 241, 0.6);
+  font-family: 'Proxima Nova', sans-serif;
+  font-style: normal;
+}
+
+.splash {
+  width: 375px;
+  height: 400px;
+  border: 1px solid #434b54;
+  border-radius: 4px;
 }
 
 .navbar {
