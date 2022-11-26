@@ -18,13 +18,14 @@
 </div>
 </div>
 </div>
-<% @group.each do |g| %>
-    <div class="d-flex justify-content-between ps-3 pe-5">
-    <img src="<%= g.icon %>" alt="#" style="width:15%" class="mb-3" />
+<div class="bg-secondary p-1"><% @group.each do |g| %>
+    <div class="d-flex justify-content-between align-items-center p-1 bg-light border m-2 home">
+    <img src="<%= g.icon %>" alt="#" class="mb-3" />
     <%= link_to group_path(g.id) do %>
     <%= g.name %>
     <% end %>
-    <p><%= Group.total_spending(params[:id]) %></p>
+    <p><%= Group.total_spending(g.id) %></p>
     </div>
 <% end %>
+</div>
 <%= link_to "Add a new category", new_group_path, class: "btn btn-info text-light align-self-center w-100" %>

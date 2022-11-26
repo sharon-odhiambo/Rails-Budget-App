@@ -28,7 +28,7 @@
         <% if c.group_id == params[:id].to_i%>
           <% items = Item.where(id: c.item_id)%>
           <% items.each do |i|%>
-            <div class = 'card border-white'>
+            <div class = 'card border m-2'>
               <div class = 'card-body d-flex flex-row justify-content-between'>
                 <div class = 'd-flex flex-column'>
                 <p> <strong><%= i.name %></strong></p>
@@ -49,4 +49,4 @@
     </div>
   </div>
 </div>
-<%= link_to "Back Home", groups_path, class: "btn btn-info text-light w-100" %>
+<%= link_to "Back Home", root_path, class: "btn btn-info text-light w-100" %>

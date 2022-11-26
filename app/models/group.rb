@@ -10,9 +10,7 @@ class Group < ApplicationRecord
       next unless i.group_id == group_id.to_i
 
       item = Item.where(id: i.item_id)
-      group_items.each do |g|
-        sum += g.item.amount.to_i
-      end
+      sum += i.item.amount.to_i
     end
     sum
   end

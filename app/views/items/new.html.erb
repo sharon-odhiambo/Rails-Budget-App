@@ -1,17 +1,23 @@
 
 <div class = 'container'>
-    <div class = 'container w-70'>
-    <%= form_with model: @items, url: group_items_path, scope: :category  do |form| %>
-      <%= form.label 'Spending name', class: 'fs-5 mb-2 mt-4' %>
-      <%= form.text_field :name, autofocus: true, autocomplete: "name", class:'form-control', require: true%>
-      
-       <%= form.label :amount, class: 'fs-5 mb-2 mt-4' %>
-       <%= form.text_field :amount, autofocus: true, autocomplete: "amount", class:'form-control mb-4', require: true%>
-
-
-      <div class="actions col-4 mx-auto mb-3">
-        <%= form.submit "Save", class: 'btn btn-info mt-3' %>
+    <%= form_with(model: @item, url: group_items_path, scope: :category, method: :post) do |form| %>
+      <div class="d-flex justify-content-between top p-2">
+        <%= link_to root_path, class: 'text-light h1' do %>
+            <i class="bi bi-arrow-left"></i>
+        <% end %>
+        <h2 class='text-light h1'>NEW ITEM</h2>
+        <%= form.submit 'Save'%>
       </div>
-
-    <%end%>
+       <div class="p-2">
+        <%= form.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+       </div>
+       <div class="p-2">
+        <%= form.number_field :amount, class: 'form-control', placeholder: 'Amount', required: true %>
+       </div>
+       <div class="p-2">
+          <%= select_tag "group", options_for_select(@groups.map { |group| [group.name, group.id] }), 
+          {prompt: 'Select Category', required: true, 
+           class: "col-12 p-2 border rounded dropdown-toggle"} %>
+       </div>
+    <% end %>
 </div>

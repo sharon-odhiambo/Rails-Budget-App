@@ -38,3 +38,8 @@ body {
   background-color: #3778c2;
   border-color: #3778c2;
 }
+
+.home img {
+  width: 100px;
+  height: 100px;
+}

@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def new
-    @item = Item.all
+    @item = Item.new
+    @groups = Group.where(user: current_user)
   end
 
   def create

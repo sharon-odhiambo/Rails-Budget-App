@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   end
 
   def index
-    @group = Group.all
+    @group = Group.where(user: current_user)
   end
 
   def show
