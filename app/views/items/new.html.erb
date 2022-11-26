@@ -1,0 +1,23 @@
+
+<div class = 'container'>
+    <%= form_with(model: @item, url: group_items_path, scope: :category, method: :post) do |form| %>
+      <div class="d-flex justify-content-between top p-2">
+        <%= link_to root_path, class: 'text-light h1' do %>
+            <i class="bi bi-arrow-left"></i>
+        <% end %>
+        <h2 class='text-light h1'>NEW ITEM</h2>
+        <%= form.submit 'Save'%>
+      </div>
+       <div class="p-2">
+        <%= form.text_field :name, class: 'form-control', placeholder: 'Name', required: true %>
+       </div>
+       <div class="p-2">
+        <%= form.number_field :amount, class: 'form-control', placeholder: 'Amount', required: true %>
+       </div>
+       <div class="p-2">
+          <%= select_tag "group", options_for_select(@groups.map { |group| [group.name, group.id] }), 
+          {prompt: 'Select Category', required: true, 
+           class: "col-12 p-2 border rounded dropdown-toggle"} %>
+       </div>
+    <% end %>
+</div>

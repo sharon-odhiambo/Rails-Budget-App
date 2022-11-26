@@ -1,0 +1,20 @@
+<div class="w-75 m-auto d-flex flex-column gap-5">
+  <%= form_with model:@group, url: groups_url do |f| %>
+      <div class="d-flex flex-column">
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, class: "p-2 mb-3" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :icon %><br />
+        <%= f.text_field :icon, class: "p-2 mb-3" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Add", class: "w-25 btn btn-info text-light align-self-end" %>
+      </div>
+      </div>
+  <% end %>
+<%= link_to "Back Home", root_path, class: "btn btn-info text-light" %>
+</div>
